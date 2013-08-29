@@ -2308,7 +2308,7 @@ transform:translateX(0) scale(1)
 	margin-left: 5px
 }
 .ui-btn-inner {
-	font-size: 14px;
+	font-size: 18px;
 	padding: .6em 20px;
 	min-width: .75em;
 	display: block;
@@ -2316,10 +2316,14 @@ transform:translateX(0) scale(1)
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
-	zoom: 1
+	zoom: 1;
+	color: #FFF !important;
+	opacity: 1;
+	font-family: play;
+	text-shadow: none;
 }
 .ui-btn input, .ui-btn button {
-	z-index: 2
+	z-index: 0;
 }
 .ui-btn-left, .ui-btn-right, .ui-btn-inline {
 	display: inline-block;
@@ -2454,29 +2458,27 @@ div.ui-btn-text {
 	height: 100%;
 	-webkit-appearance: none;
 	cursor: pointer;
-	background: #fff;
-	background: rgba(255,255,255,0);
-	filter: Alpha(Opacity=0);
-	opacity: .1;
+	background: #000;
+	opacity: .8;
 	font-size: 1px;
 	border: 0;
-	text-indent: -9999px
+	text-indent: -9999px;
 }
 .ui-disabled .ui-btn-hidden {
-	display: none
+	display: none;
 }
 .ui-disabled {
 	z-index: 1
 }
 .ui-field-contain .ui-btn.ui-submit {
-	margin: 0
+	margin: 0;
 }
 label.ui-submit {
 	font-size: 16px;
 	line-height: 1.4;
 	font-weight: 400;
 	margin: 0 0 .3em;
-	display: block
+	display: block;
 }
 @media all and (min-width:28em) {
 .ui-field-contain label.ui-submit {
@@ -3191,7 +3193,8 @@ div.ui-input-text input.ui-input-text, div.ui-input-text textarea.ui-input-text,
 	padding: 0 30px
 }
 div.ui-input-text {
-	padding: 0 .4em
+	padding: 0 .4em;
+	background: #FFF !important;
 }
 div.ui-input-has-clear {
 	padding: 0 30px 0 .4em

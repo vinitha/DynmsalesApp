@@ -199,6 +199,33 @@ ul.listing2 li{
 	list-style-position:inside;
 	font: bold 13px/24px Arial, Helvetica, sans-serif;
 }
+ul.listing3{
+	margin:0;
+	padding:0;
+}
+ul.listing3 li{
+	float:left;
+	width: 40%;
+	text-align:center;
+	list-style:none;
+	margin-top: 10px;
+	margin: 5%;
+}
+ul.listing3 li img{
+	border: 2px #666 solid;
+	width: 100%;
+}
+ul.listing3 li img:hover{
+	border: 2px #2da4d3 solid;
+}
+ul.listing3 li a{
+	font: bold 13px/24px play;
+	color: #333 !important;
+	text-decoration:none;
+}
+ul.listing3 li a:hover{
+	color: #2da4d3 !important;
+}
 ul.testi{
 	margin:0;
 	padding:0;
@@ -206,4 +233,24 @@ ul.testi{
 ul.testi li{
 	list-style:none;
 	border-bottom: 1px #ccc solid;
+}
+.email{
+	background:url(../images/mail.png) no-repeat;
+	padding-left: 30px;
+}
+.email a{
+	font: 14px/23px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	color: #333 !important;
+}
+.email a:hover{
+	color: #2DA4D3 !important;
+}
+.phone_no{
+	background:url(../images/phone-icon.png) no-repeat;
+	padding-left: 30px;
+	font: 14px/23px Arial, Helvetica, sans-serif;
+}
+.input{
+	background: #FFF !important;
 }
