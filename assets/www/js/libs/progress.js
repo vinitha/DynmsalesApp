@@ -51,6 +51,8 @@
             setTimeout(function() {
               labelEl.fadeOut();
             }, 1000);
+			
+			window.location="menu.html";
           }else{
             valueEl.text(Math.ceil(progress) + '%');
           }
