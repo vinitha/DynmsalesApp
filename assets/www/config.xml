@@ -23,7 +23,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
-	<preference name="splash-screen-duration" value="10000" />
+	<preference name="splash-screen-duration" value="1000" />
     <icon src="logo.jpg" />
 
 	

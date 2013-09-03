@@ -30,19 +30,19 @@ var app = {
     },
 
 
-    blog: function(){
-        function getBlogs() {
+    homefn: function(){
+        function getHome() {
             var dfd = $.Deferred();
             $.ajax({
-                url: 'http://alexbachuk.com/api/get_recent_posts/',
+                url: 'http://dynmsales.com/api/get_recent_posts/?post_id=133',
                 type: 'GET',
                 dataType: 'json',
                 success: function(data){
-                    var source   = $("#blog-template").html();
+                    var source   = $("#home-template").html();
                     var template = Handlebars.compile(source);
                     var blogData = template(data);
-                    $('#blog-data').html(blogData);
-                    $('#blog-data').trigger('create');
+                    $('#home-data').html(blogData);
+                    $('#home-data').trigger('create');
                     dfd.resolve(data);
 
                 },
@@ -53,10 +53,8 @@ var app = {
             return dfd.promise();
         };
 
-        getBlogs().then(function(data){
-            $('#all-posts').on('click','li', function(e){                
-                localStorage.setItem('postData', JSON.stringify(data.posts[$(this).index()]));
-            });
+        getHome().then(function(data){
+           
         });
 
         
