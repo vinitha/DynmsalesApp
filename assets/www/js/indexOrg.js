@@ -40,8 +40,8 @@ var app = {
                 success: function(data){
                     var source   = $("#home-template").html();
                     var template = Handlebars.compile(source);
-                    var blogData = template(data);
-                    $('#home-data').html(blogData);
+                    var hmData = template(data);
+                    $('#home-data').html(data);
                     $('#home-data').trigger('create');
                     dfd.resolve(data);
 
