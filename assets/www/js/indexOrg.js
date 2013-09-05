@@ -29,7 +29,8 @@ var app = {
         
     },
 homefn: function(){
-		
+		$.support.cors = true;
+  $.mobile.allowCrossDomainPages = true;
 	$.jsonp({
 		 url: 'http://dynmsales.com/api/get_page/?id=133',
 		callbackParameter: 'callback',
@@ -112,8 +113,4 @@ homefn: function(){
     }
 
 };
-$( document ).bind( "mobileinit", function() {
-  // Make your jQuery Mobile framework configuration changes here!
-$.support.cors = true;
-  $.mobile.allowCrossDomainPages = true;
-});
+
