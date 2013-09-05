@@ -55,7 +55,7 @@ var app = {
 
                 
        
-		alert(headline.title);
+		
        console.log(res);
     }
 });
@@ -64,7 +64,7 @@ var app = {
        
 
       
-alert('exit');
+
         
     },
     single: function() {
