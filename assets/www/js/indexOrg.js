@@ -31,31 +31,40 @@ var app = {
 
 
     homefn: function(){
+		
         function getHome() {
+			
+			alert("hi2");
             var dfd = $.Deferred();
-            $.ajax({
-                url: 'http://dynmsales.com/api/get_recent_posts/?post_id=133',
-                type: 'GET',
-                dataType: 'json',
-                success: function(data){
+  
+        alert("hi3");
+			 $.ajaxSetup({ cache: false });
+
+      $.ajax({
+    url: 'http://dynmsales.com/api/get_page/?id=133',
+    type: 'GET',
+	  dataType: "jsonp",
+    success: function(res) {
+		      alert("hi4");                            
+		 var headline = res.page;
                     var source   = $("#home-template").html();
                     var template = Handlebars.compile(source);
-                    var hmData = template(data);
-                    $('#home-data').html(data);
+                    var homeData = template(headline);
+                    $('#home-template').html(homeData);
                     $('#home-data').trigger('create');
                     dfd.resolve(data);
 
-                },
-                error: function(data){
-                    console.log(data);
-                }
-            });
+                
+       
+		alert(headline.title);
+       console.log(res);
+    }
+});
+			
             return dfd.promise();
         };
 
-        getHome().then(function(data){
-           
-        });
+      
 
         
     },
