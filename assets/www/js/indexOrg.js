@@ -49,7 +49,7 @@ var app = {
 
 
     homefn: function(){
-		
+		$('#home-data').html("helloo"); 
             var dfd = $.Deferred();
   
       
