@@ -28,7 +28,7 @@ var app = {
 
         
     },
-homefn: function(){
+/*homefn: function(){
 	$.ajaxSetup({ cache: false });
 	$('#home-data').html("wlcome");
 		$.support.cors = true;
@@ -45,14 +45,14 @@ homefn: function(){
 		}
 	});
 
-},
+}, */
 
 
-   /* homefn: function(){
+    homefn: function(){
 		
             var dfd = $.Deferred();
   
-       
+      
 			 $.ajaxSetup({ cache: false });
 
       $.ajax({
@@ -69,7 +69,7 @@ homefn: function(){
                     var homeData = template(headline);
                     $('#home-template').html(homeData);
                     $('#home-data').trigger('create');
-                    dfd.resolve(data);
+                    dfd.resolve(res);
 
                 
        
@@ -84,7 +84,7 @@ homefn: function(){
       
 
         
-    },*/
+    },
     single: function() {
         
             var postDataStorage = localStorage.getItem('postData');
