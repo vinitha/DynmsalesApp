@@ -32,12 +32,9 @@ var app = {
 
     homefn: function(){
 		
-        function getHome() {
-			
-			alert("hi2");
             var dfd = $.Deferred();
   
-        alert("hi3");
+       
 			 $.ajaxSetup({ cache: false });
 
       $.ajax({
@@ -45,8 +42,10 @@ var app = {
     type: 'GET',
 	  dataType: "jsonp",
     success: function(res) {
-		      alert("hi4");                            
+		                          
 		 var headline = res.page;
+		  
+			  $('#home-data').html(headline.title); 
                     var source   = $("#home-template").html();
                     var template = Handlebars.compile(source);
                     var homeData = template(headline);
@@ -62,10 +61,10 @@ var app = {
 });
 			
             return dfd.promise();
-        };
+       
 
       
-
+alert('exit');
         
     },
     single: function() {
