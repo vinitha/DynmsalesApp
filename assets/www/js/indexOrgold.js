@@ -28,24 +28,9 @@ var app = {
 
         
     },
-homefn: function(){
-		
-	$.jsonp({
-		 url: 'http://dynmsales.com/api/get_page/?id=133',
-		callbackParameter: 'callback',
-		success: function(data, status) {
-			var s=data.page;
-			$('#home-data').html(s.title);
-			},
-		error: function(){
-			$('#home-data').html('There was an error loading the feed');
-		}
-	});
-
-},
 
 
-   /* homefn: function(){
+    homefn: function(){
 		
             var dfd = $.Deferred();
   
@@ -81,7 +66,7 @@ homefn: function(){
       
 
         
-    },*/
+    },
     single: function() {
         
             var postDataStorage = localStorage.getItem('postData');
@@ -114,6 +99,6 @@ homefn: function(){
 };
 $( document ).bind( "mobileinit", function() {
   // Make your jQuery Mobile framework configuration changes here!
-$.support.cors = true;
+$.support.cors = true;.
   $.mobile.allowCrossDomainPages = true;
 });
