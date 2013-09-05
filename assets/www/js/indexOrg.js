@@ -29,6 +29,7 @@ var app = {
         
     },
 homefn: function(){
+	$.ajaxSetup({ cache: false });
 	$('#home-data').html("wlcome");
 		$.support.cors = true;
   $.mobile.allowCrossDomainPages = true;
